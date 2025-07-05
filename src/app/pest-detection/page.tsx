@@ -1,3 +1,4 @@
+import DetectionPage from "@/components/Detection";
 import React from "react";
 
 const pestResults = [
@@ -29,40 +30,11 @@ const pestResults = [
 			"Use miticides or insecticidal soap to control spider mite populations. Increase humidity around plants to make conditions less favorable for mites.",
 	},
 ];
-
+// bg-[#111714]
 const PestDetectionPage = () => {
     return (
-        <div className="flex flex-col items-center py-8 bg-[#111714]">
-				<h2 className="text-white text-2xl font-bold mb-6">
-					Pest Detection Results
-				</h2>
-				<div className="w-full max-w-2xl space-y-6">
-					{pestResults.map((pest) => (
-						<div
-							className="flex flex-col md:flex-row items-center gap-4 bg-[#1a2320] rounded-lg p-4"
-							key={pest.name}
-						>
-							<div className="flex-1">
-								<p className="text-white text-lg font-bold">{pest.name}</p>
-								<p className="text-[#9eb7a8] text-sm mb-3">
-									{pest.description}
-								</p>
-								<p className="text-white text-sm">Solution:</p>
-								{/* <button className="bg-[#29382f] text-white text-sm rounded px-4 py-2 disabled:opacity-50">
-								Solutions:
-							</button> */}
-								<p className="text-[#9eb7a8] text-sm mb-3">
-									{pest.solution}
-								</p>
-							</div>
-							<div
-								className="w-full md:w-60 aspect-video bg-center bg-cover rounded"
-								style={{ backgroundImage: `url("${pest.image}")` }}
-							></div>
-						</div>
-					))}
-				</div>
-			</div>
-    );
+		<DetectionPage Results={pestResults} pagename="Pest Detection Page"/>
+	);
 }
+
 export default PestDetectionPage;
