@@ -29,7 +29,7 @@ export default function Navbar() {
             {/* <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
             </svg> */}
-            <img src="./assets/logo2.png" alt="AgroAegis Logo" width="36px" height="36px"  />
+            <Image src="/assets/logo2.png" alt="AgroAegis Logo" width={36} height={36}  />
           </div>
           <h2 className="text-lg font-bold tracking-[-0.015em] mt-2">AgroAegis</h2>
         </div>
