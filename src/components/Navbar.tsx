@@ -8,8 +8,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const tabs = [
+
     {
-      href: "/pest-detection",
+      href: "/",
       label: "Pest Detection",
     },
     {
